@@ -1,1 +1,32 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Codificador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/Logo.png" alt="logo" class="logo">
+    </header>
+    <main class="main-section">
+        <div class="input-section">
+            <p class="alert hide-alert"></p>
+            <p class="alerta-texto-copiado hide-alert"></p>
+            <textarea  id="input-text" placeholder="Ingrese el texto aqui" ></textarea>
+            <p class="alert-text"><span><img src="assets/bi_exclamation-circle-fill.png" alt="exclamation text"></span>Solo letras minusculas y sin acentos</p>
+            <div class="btn-container">
+                <button type="button" id="encriptar">Encriptar</button>
+                <button type="button" id="desencriptar">Desencriptar</button>
+            </div>
+        </div>
+        <div class="output-section">
+            <img src="assets/Muñeco.png" alt="imagen de muñeco"  id="output-img">
+            <h2 >Ningún mensaje fue encontrado</h2>
+            <p class="instruccion">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
