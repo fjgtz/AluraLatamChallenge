@@ -1,1 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B31;
+    --dark-blue-500: #052051;
 
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+
+    --white: white;
+
+    --primary-font:"Inter" sans-serif;
+    --secondary-font: "Roboto", sans-serif; ;
+    --box-shadow: -3px -2px 36px 2px rgba(0,0,0,0.57);
+                    
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+
+
+body {
+    width: 100vw;
+    background-color: var(--light-blue-400);
+    font-size: var(--secondary-font);
+}
+.header {
+    height: 10px;
+}
+.logo {
+    width: 120px;
+    height: 48px;
+    margin: 40px;
+}
+.main-section {
+    max-width: 80%;
+    display: flex;
+    gap: 10%;
+    margin-inline: auto;
+}
+.alert {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  height: fit-content;
+  background-color: var(--gray-300);
+  color: rgb(113, 32, 32);
+}
+.hide-alert {
+  display: none;
+  height: 0;
+}
+.input-section {
+    width: 60%;
+    min-width: 878px;
+    padding: 3%;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+    margin-top: 10%;
+}
+
+#input-text {
+    width: 80%;
+    min-height: 50%;
+    font-size: 2rem;
+    background-color: var(--light-blue-400);
+    color: var(--dark-blue-300);
+    border: none;
+    border-radius: 5px;
+    padding: 2% 3%;
+    margin-bottom: 20%;
+    overflow: hidden;
+}
+
+#input-text:focus {
+    border-color: var(--secondary-color); 
+    outline: none;         
+    box-shadow: 0 0 5px var(--gray-300); 
+  }
+  textarea::placeholder {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+    
+  }
+
+  .alert-text {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    margin-top: 8%;
+  
+  }
+
+  .btn-container {
+    display: flex;
+    margin-top: 1%;
+    
+  }
+  button {
+    width: 40%;
+    height: 67px;
+    min-width: 259px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--dark-blue-400);
+    border-radius: 24px;
+  }
+ #encriptar {
+  background-color: var(--dark-blue-300);
+  color: var(--white);
+  margin-right: 1.2rem;
+  margin-left: 1rem;
+ }
+ #desencriptar {
+  background-color: var(--light-blue-300);
+  color: var(--dark-blue-400);
+  margin-right: 1.2rem;
+  margin-left: 1rem;
+ }
+button:hover {
+    cursor: pointer;
+  }
+.output-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px;
+    min-height: 800px;
+    margin: 40px;
+    padding: 20px 10px 10px 10px;
+    background-color: var(--white);
+    border-radius: 32px;
+    box-shadow: var(--box-shadow);
+    
+}
+
+
+.btn-copiar {
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  color: var(--dark-blue-300);
+}
+.alerta-texto-copiado {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  height: fit-content;
+  background-color: var(--gray-300);
+  color: rgb(113, 32, 32);
+}
+#output-img {
+    width: 336px;
+    height: 304px;
+    margin: 5rem 3rem 0 1rem;
+}
+.output-section h2 {
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--gray-500);
+  margin-inline: auto;
+}
+
+.output-section .instruccion {
+  position: relative;
+  bottom: 90px;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  text-align: center;
+  color: var(--gray-400);
+  margin-inline: auto;
+}
+
+.texto-encriptado {
+  width: fit-content;
+  margin: 3rem auto;
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--gray-400);
+  
+}
+
+@media (max-width: 1280px) {
+  /* Estilo para laptops y desktops */
+  
+  .input-section {
+    min-width: 550px;
+  }
+  .output-section {
+    min-width: 300px;
+    min-height: 650px;
+  }
+  .output-section .instruccion {
+    bottom: 10px;
+  }
+  #output-img {
+    width: 100%;
+    height: 250px;
+    margin: 3rem auto;
+  }
+}
+@media (max-width: 1024px) {
+  /* Estilo para tablets */
+  .header {
+    width: 80%;
+    margin-inline: auto;
+    padding-top: 3rem;
+  }
+  .logo {
+    margin: 0;
+  }
+  .main-section {
+    flex-direction: column;
+  }
+  .input-section {
+    width: 100%;
+    min-width: revert;
+    margin-inline: auto;
+  }
+  #input-text {
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 2%;
+  }
+  .btn-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  #encriptar, #desencriptar {
+    margin: 0;
+    width: 45%;
+    min-width: revert;
+  }
+  #desencriptar, .btn-copiar {
+    background-color: transparent;
+  }
+  .output-section {
+    width: 100%;
+    height: fit-content;
+    min-width: revert;
+    min-height: revert;
+    margin-inline: auto;
+  }
+  #output-img {
+    display: none;
+  }
+  .output-section .instruccion {
+    bottom: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767px){
+  /* Estilo para celulares */
+  
+  .header {
+    width: 100%;
+    height: fit-content;
+    padding-top: 6%;
+    }
+  .logo {
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    position: relative;
+    left: -2%;
+  }
+  .main-section {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+  .input-section {
+    width: 100%;
+    min-width: revert;
+  }
+  .btn-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #encriptar, #desencriptar {
+    width: 100%;
+  }
+  
+}
