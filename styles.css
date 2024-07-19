@@ -53,6 +53,19 @@ body {
     gap: 10%;
     margin-inline: auto;
 }
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray-300);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(36, 35, 35, 0.2);
+  color: rgb(113, 32, 32); 
+  max-width: 300px;
+  text-align: center;
+}
 .alert {
   width: 100%;
   text-align: center;
@@ -60,6 +73,7 @@ body {
   height: fit-content;
   background-color: var(--gray-300);
   color: rgb(113, 32, 32);
+  border-radius: 8px;
 }
 .hide-alert {
   display: none;
