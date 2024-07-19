@@ -109,7 +109,7 @@ function copiarTexto() {
 
     textoCopiado.style.backgroundColor = '#D9D9D9'
     textoCopiado.style.Color = '#020202'
-    mustraAlerta('alerta-texto-copiado', 'Texto copiado')
+   mustraAlerta('popup', 'el texto se ha copiado')
 }
 
 function mustraAlerta(clase, texto) {
@@ -123,4 +123,5 @@ function mustraAlerta(clase, texto) {
         
     }, 2000);
 }
+
 
